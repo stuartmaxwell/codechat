@@ -7,27 +7,6 @@ from rich.syntax import Syntax
 
 from openaichat import chat_with_openai
 
-# def retrieve_content_from_file(file_path: str) -> str:
-#     """
-#     Reads the contents of a file at the given path and returns them as a
-#     UTF-8 encoded string.
-
-#     Args:
-#         file_path: The path of the file to read.
-
-#     Returns:
-#         The contents of the file as a UTF-8 encoded string.
-
-#     Raises:
-#         FileNotFoundError: If the file at the given path does not exist.
-#     """
-#     try:
-#         with open(file_path, mode="r", encoding="utf-8") as file:
-#             contents = file.read()
-#     except FileNotFoundError as e:
-#         raise FileNotFoundError(f"File not found: {file_path}") from e
-#     return contents
-
 
 def read_file_content(file_paths: list[str]) -> str:
     """
@@ -113,8 +92,6 @@ def main() -> None:
 
     file_paths = args.files
     code_content = read_file_content(file_paths)
-
-    # print_syntax(file_path)
 
     while True:
         user_input = get_user_input(code_content)

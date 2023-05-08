@@ -1,4 +1,4 @@
-# Code Explainer
+# Code Chat
 
 Inspired by some code provided by Arjan Codes here: <https://www.youtube.com/watch?v=mVX3Z46iYTQ>
 
@@ -33,7 +33,7 @@ python codechat.py file1.txt file2.txt
 
 Replace `file1.txt`, `file2.txt`, etc, with the file names or paths to the files that you want to include in the context. You can include as many files as you like.
 
-Once the tool is running, you can enter a question at the prompt. The tool will generate a response based on the contents of the files, using OpenAI's GPT-3
+Once the tool is running, you can enter a question at the prompt. The tool will generate a response based on the contents of the files, using OpenAI's GPT-3.5
 language model. You can then ask more questions, and the tool will continue to use the context from the files for subsequent questions.
 
 To exit the tool, type exit at the prompt.
@@ -52,4 +52,4 @@ This tool is licensed under the MIT License. See the LICENSE file for details.
 
 ## Acknowledgements
 
-This tool was created by Stuart Maxwell. It is based on the OpenAI GPT-3 API and uses the rich Python library for formatted output.
+This tool was created by Stuart Maxwell. It is based on the OpenAI GPT-3.5 API and uses the `rich` Python library for formatted output.

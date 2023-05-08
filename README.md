@@ -5,7 +5,7 @@ Inspired by some code provided by Arjan Codes here: <https://www.youtube.com/wat
 ## Introduction
 
 This is a command-line tool that allows users to ask programming-related questions about code stored in multiple files. The tool will read the contents of the  
-files and use them as context when interacting with OpenAI's GPT-3 language model to provide answers to the user's questions.
+files and use them as context when interacting with OpenAI's GPT-3.5 language model to provide answers to the user's questions.
 
 ## Requirements
 

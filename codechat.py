@@ -5,7 +5,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.syntax import Syntax
 
-from chatbot import chat_with_openai
+from openaichat import chat_with_openai
 
 # def retrieve_content_from_file(file_path: str) -> str:
 #     """

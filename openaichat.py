@@ -8,7 +8,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 conversation_history = []
 
 
-def chat_with_openai(prompt: str) -> Optional[str]:
+def chat_with_openai(system_content: str, user_content: str) -> Optional[str]:
     """
     Send a message to the OpenAI chatcompletion API and receive a response from the
     assistant.
@@ -24,13 +24,13 @@ def chat_with_openai(prompt: str) -> Optional[str]:
     """
     global conversation_history
 
-    conversation_history.append({"role": "user", "content": prompt})
+    conversation_history.append({"role": "user", "content": user_content})
 
     data = {
         "messages": [
             {
                 "role": "system",
-                "content": "You are a helpful assistant with expertise in programming.",
+                "content": system_content,
             }
         ]
         + conversation_history,

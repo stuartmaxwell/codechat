@@ -87,11 +87,19 @@ def main() -> None:
         nargs="+",
         help="List of files to include in the context",
     )
+    parser.add_argument(
+        "-p",
+        "--prompt",
+        dest="prompt",
+        help="Custom initial prompt for the conversation",
+    )
 
     args = parser.parse_args()
 
-    file_paths = args.files
-    code_content = read_file_content(file_paths)
+    code_content = read_file_content(args.files)
+    system_content = (
+        args.prompt or "You are a helpful assistant with expertise in programming."
+    )
 
     while True:
         user_input = get_user_input(code_content)
@@ -101,7 +109,7 @@ def main() -> None:
             break
 
         try:
-            code_info = chat_with_openai(user_input)
+            code_info = chat_with_openai(system_content, user_input)
         except ValueError as e:
             print(f"Error: {e}")
             continue
